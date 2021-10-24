@@ -1,0 +1,27 @@
+.container {
+	position: absolute;
+	padding: 0;
+	background-color: rgb(54, 54, 54, 0.5);
+	right: 0;
+	top: 50%;
+	transform: translate(-0%, -50%);
+	margin: 0;
+	height: 100vh;
+	width: 3.6rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	@media screen and (max-width: 600px) {
+		visibility: hidden;
+	}
+}
+
+.text {
+	/* position: relative; */
+	writing-mode: vertical-lr;
+	font-size: 1.3rem;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(156, 156, 156);
+	letter-spacing: 1.5px;
+	margin: 0 auto;
+}

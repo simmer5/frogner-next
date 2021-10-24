@@ -1,0 +1,23 @@
+.main {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url('../public/bg-cool.svg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100%;
+	color: whitesmoke;
+}
+.section {
+	display: flex;
+	border: 1px solid red;
+}
+.kontakt {
+	text-align: center;
+}
+.paragraf {
+	text-align: center;
+	margin: 0;
+}
