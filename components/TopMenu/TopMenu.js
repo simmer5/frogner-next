@@ -24,7 +24,7 @@ const TopMenu = () => {
 						</li> */}
 						<li className={styles.item}>
 							<Link href='/kompetanser'>
-								<a>Våre kompetanser</a>
+								<a>Tjenester</a>
 							</Link>
 						</li>
 						<li className={styles.item}>

@@ -1,27 +1,30 @@
 .main {
-	height: 100vh;
-	display: flexbox;
-	flex-direction: column;
-	padding: 0;
-	margin: 0;
+	height: 90vh;
+	width: 90vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	margin: 0 auto;
 	align-items: center;
 	justify-content: center;
+
 	background-image: url('../public/bg-cool.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 100%;
 
 	@media screen and (min-width: 600px) {
-		height: 100vh;
+		height: 90vh;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		/* background-image: url('../public/bg-cool.svg'); */
+		background-image: url('../public/bg-cool.svg');
 		background-repeat: no-repeat;
 		background-position: center center;
 		background-size: 100%;
 		width: 80%;
-		margin: auto;
+		margin: 0 auto;
 	}
 }
