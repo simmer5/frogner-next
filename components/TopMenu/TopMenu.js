@@ -2,13 +2,15 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from './TopMenu.module.css'
+import TopNav from '../TopNav/TopNav'
 
 import Logo from '../../assets/FrognerByggLogo.svg'
 
 const TopMenu = () => {
 	return (
 		<header className={styles.header}>
-			<div className={styles.container}>
+			<TopNav />
+			{/* <div className={styles.container}>
 				<Link href='/'>
 					<a>
 						<Image src={Logo} alt='Frogner Bygg Service' width={150} />
@@ -22,7 +24,7 @@ const TopMenu = () => {
 								<a>Hjem</a>
 							</Link>
 						</li> */}
-						<li className={styles.item}>
+			{/* <li className={styles.item}>
 							<Link href='/kompetanser'>
 								<a>Tjenester</a>
 							</Link>
@@ -32,9 +34,9 @@ const TopMenu = () => {
 								<a>Kontakt oss</a>
 							</Link>
 						</li>
-					</ul>
-				</nav>
-			</div>
+					</ul> */}
+			{/* </nav> */}
+			{/* </div> */}
 		</header>
 	)
 }

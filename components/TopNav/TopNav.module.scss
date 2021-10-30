@@ -1,0 +1,164 @@
+/* navigation styles start here */
+
+.header {
+	background: rgba(0, 214, 170, 0.85);
+	text-align: center;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.navToggle {
+	position: absolute !important;
+	top: -9999px !important;
+	left: -9999px !important;
+	&:focus ~ .navToggleLabel {
+		outline: 3px solid rgba(rgb(238, 11, 238), 0.75);
+	}
+	&:checked ~ nav {
+		transform: scale(1, 1);
+	}
+	&:checked ~ nav a {
+		opacity: 1;
+		transition: opacity 250ms ease-in-out 250ms;
+	}
+}
+.labelContainer {
+	background-color: #c7ff00;
+	height: 100%;
+	width: 4rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.navToggleLabel {
+	position: relative;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	height: 100%;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: flex;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	align-items: center;
+	background-color: brown;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	span,
+	span::before,
+	span::after {
+		display: block;
+		background: rgb(188, 16, 211);
+		height: 2px;
+		width: 2em;
+		border-radius: 2px;
+		position: relative;
+		content: '';
+		position: absolute;
+	}
+	span::before {
+		bottom: 7px;
+	}
+	span::after {
+		top: 7px;
+	}
+}
+
+.nav {
+	position: absolute;
+	text-align: left;
+	top: 100%;
+	left: 0;
+	background: rgb(224, 228, 13);
+	width: 100%;
+	transform: scale(1, 0);
+	transform-origin: top;
+	transition: transform 400ms ease-in-out;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	li {
+		margin-bottom: 1em;
+		margin-left: 1em;
+	}
+	a {
+		color: white;
+		text-decoration: none;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		opacity: 0;
+		transition: opacity 150ms ease-in-out;
+	}
+	a:hover {
+		color: #000;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.navToggleLabel,
+	.labelContainer {
+		display: none;
+	}
+
+	.header {
+		display: grid;
+		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+	}
+
+	.logo {
+		grid-column: 2 / 3;
+	}
+
+	.nav {
+		// all: unset; /* this causes issues with Edge, since it's unsupported */
+
+		/* the following lines are not from my video, but add Edge support */
+		position: relative;
+		text-align: left;
+		transition: none;
+		transform: scale(1, 1);
+		background: none;
+		top: initial;
+		left: initial;
+		/* end Edge support stuff */
+
+		grid-column: 3 / 4;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		ul {
+			display: flex;
+		}
+		li {
+			margin-left: 3em;
+			margin-bottom: 0;
+		}
+		a {
+			opacity: 1;
+			position: relative;
+		}
+		a::before {
+			content: '';
+			display: block;
+			height: 5px;
+			background: rgb(172, 141, 141);
+			position: absolute;
+			top: -0.75em;
+			left: 0;
+			right: 0;
+			transform: scale(0, 1);
+			transition: transform ease-in-out 250ms;
+		}
+		a:hover::before {
+			transform: scale(1, 1);
+		}
+	}
+}
