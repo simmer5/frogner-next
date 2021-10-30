@@ -1,13 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
+import Logo from '../../assets/FrognerByggLogo.svg'
 import styles from './TopNav.module.scss'
 
 const TopNav = () => {
 	const [checked, setChecked] = useState(false)
 	return (
 		<header className={styles.header}>
-			<h1 className={styles.logo}>Logo</h1>
+			<h1 className={styles.logo}>
+				<Link href='/'>
+					<a>
+						<Image src={Logo} alt='Frogner Bygg Service' width={150} />
+					</a>
+				</Link>
+			</h1>
 			<input
 				type='checkbox'
 				id='nav-toggle'
@@ -17,17 +26,20 @@ const TopNav = () => {
 
 			<nav className={styles.nav}>
 				<ul>
-					<li>
-						<a href='#'>Home</a>
+					<li onClick={() => setChecked(false)}>
+						<Link href='/'>
+							<a>Hjem</a>
+						</Link>
 					</li>
-					<li>
-						<a href='#'>About</a>
+					<li onClick={() => setChecked(false)}>
+						<Link href='/kompetanser'>
+							<a>Tjenester</a>
+						</Link>
 					</li>
-					<li>
-						<a href='#'>Blog</a>
-					</li>
-					<li>
-						<a href='#'>Contact</a>
+					<li onClick={() => setChecked(false)}>
+						<Link href='/kontakt'>
+							<a>Kontakt oss</a>
+						</Link>
 					</li>
 				</ul>
 			</nav>

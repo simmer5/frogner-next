@@ -1,11 +1,16 @@
 /* navigation styles start here */
 
 .header {
-	background: rgba(0, 214, 170, 0.85);
-	text-align: center;
-	position: fixed;
+	// background: rgba(0, 214, 170, 0.85);
+	// text-align: center;
+	// position: fixed;
+	// z-index: 999;
+	// width: 100%;
+
+	position: sticky;
+	width: 100vw;
+	/* top: 0; */
 	z-index: 999;
-	width: 100%;
 }
 
 /* changed this from the tutorial video to
@@ -26,7 +31,6 @@
 	}
 }
 .labelContainer {
-	background-color: #c7ff00;
 	height: 100%;
 	width: 4rem;
 	position: absolute;
@@ -46,7 +50,7 @@
 	-webkit-align-items: center;
 	-moz-box-align: center;
 	align-items: center;
-	background-color: brown;
+
 	width: 100%;
 	align-items: center;
 	justify-content: center;
@@ -54,7 +58,7 @@
 	span::before,
 	span::after {
 		display: block;
-		background: rgb(188, 16, 211);
+		background: rgba(rgb(238, 11, 238), 0.75);
 		height: 2px;
 		width: 2em;
 		border-radius: 2px;
@@ -72,10 +76,10 @@
 
 .nav {
 	position: absolute;
-	text-align: left;
+	text-align: center;
 	top: 100%;
 	left: 0;
-	background: rgb(224, 228, 13);
+	background: rgb(0, 0, 0);
 	width: 100%;
 	transform: scale(1, 0);
 	transform-origin: top;
@@ -98,7 +102,7 @@
 		transition: opacity 150ms ease-in-out;
 	}
 	a:hover {
-		color: #000;
+		color: #636363;
 	}
 }
 
@@ -149,7 +153,7 @@
 			content: '';
 			display: block;
 			height: 5px;
-			background: rgb(172, 141, 141);
+			background: #bd00a0;
 			position: absolute;
 			top: -0.75em;
 			left: 0;

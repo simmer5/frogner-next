@@ -8,7 +8,8 @@ import Logo from '../../assets/FrognerByggLogo.svg'
 
 const TopMenu = () => {
 	return (
-		<header className={styles.header}>
+		// <header className={styles.header}>
+		<>
 			<TopNav />
 			{/* <div className={styles.container}>
 				<Link href='/'>
@@ -37,7 +38,8 @@ const TopMenu = () => {
 					</ul> */}
 			{/* </nav> */}
 			{/* </div> */}
-		</header>
+			{/* </header> */}
+		</>
 	)
 }
 
