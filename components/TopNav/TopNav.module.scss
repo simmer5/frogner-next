@@ -1,20 +1,12 @@
-/* navigation styles start here */
-
 .header {
-	// background: rgba(0, 214, 170, 0.85);
-	// text-align: center;
-	// position: fixed;
-	// z-index: 999;
-	// width: 100%;
-
 	position: sticky;
 	width: 100vw;
-	/* top: 0; */
 	z-index: 999;
 }
+.logo {
+	margin: 1rem;
+}
 
-/* changed this from the tutorial video to
-   allow it to gain focus, making it tabbable */
 .navToggle {
 	position: absolute !important;
 	top: -9999px !important;
@@ -113,8 +105,14 @@
 	}
 
 	.header {
-		display: grid;
+		// display: grid;
+		// grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+		display: flex;
 		grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+		flex-grow: flex;
+		justify-content: space-between;
+		width: 80%;
+		margin: 0 auto;
 	}
 
 	.logo {
@@ -122,9 +120,7 @@
 	}
 
 	.nav {
-		// all: unset; /* this causes issues with Edge, since it's unsupported */
-
-		/* the following lines are not from my video, but add Edge support */
+		/* Edge support */
 		position: relative;
 		text-align: left;
 		transition: none;

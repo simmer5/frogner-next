@@ -1,10 +1,10 @@
 import '../styles/globals.css'
-import TopMenu from '../components/TopMenu/TopMenu'
+import TopNav from '../components/TopNav/TopNav'
 
 function MyApp({ Component, pageProps }) {
 	return (
 		<>
-			<TopMenu />
+			<TopNav />
 			<Component {...pageProps} />
 		</>
 	)
